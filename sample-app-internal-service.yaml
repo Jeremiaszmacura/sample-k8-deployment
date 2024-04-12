@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: sample-app-internal-service
+spec:
+  selector:
+    app.kubernetes.io/name: sample-app  # to find specific deplyment by it's label
+  ports:
+    - protocol: TCP
+      port: 5000
+      targetPort: 5000
